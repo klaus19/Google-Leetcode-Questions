@@ -29,9 +29,10 @@ public class ContainsDuplicate {
 
     //Using HashSet
     public boolean usingHashset(int[]nums){
-        HashSet<Integer>set = new HashSet<>();
+        HashSet<Integer>numbers = new HashSet<>();
         for (int i=0;i<nums.length;i++){
-            if (set.contains(nums[i])) return true;
+            if (numbers.contains(nums[i])) return true;
+            numbers.add(nums[i]);
         }
         return false;
     }
