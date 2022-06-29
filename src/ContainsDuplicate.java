@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class ContainsDuplicate {
 
@@ -26,9 +27,21 @@ public class ContainsDuplicate {
         return false;
     }
 
+    //Using HashSet
+    public boolean usingHashset(int[]nums){
+        HashSet<Integer>set = new HashSet<>();
+        for (int i=0;i<nums.length;i++){
+            if (set.contains(nums[i])) return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         ContainsDuplicate c = new ContainsDuplicate();
         int[]arr = new int[]{1,2,3};
-        System.out.println(c.duplicate(arr));
+        System.out.println(c.containsDuplicate(arr)); //using brute force method
+        System.out.println(c.duplicate(arr)); //using HashMap
+        System.out.println(c.usingHashset(arr)); //Using Hashset
+
     }
 }
