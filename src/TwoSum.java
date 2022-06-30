@@ -18,6 +18,7 @@ public class TwoSum {
     }
 
 
+
     public static void main(String[] args) {
         TwoSum ts = new TwoSum();
         int target = 7;
