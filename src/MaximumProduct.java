@@ -1,6 +1,6 @@
 import org.jetbrains.annotations.NotNull;
 
-public class MaximumProduct {
+public class MaximumProduct{
 
        public int getMax_product(@NotNull int[]arr) {
 
@@ -21,7 +21,7 @@ return ans;
     public static void main(String[] args) {
 
            MaximumProduct ms = new MaximumProduct();
-           int[]arr = new int[]{2,-3,-2,1};
+           int[]arr = new int[]{2,-3,-2,4};
            int[]nums = new int []{4,4,-2,-4};
 
            System.out.println(ms.getMax_product(arr));
