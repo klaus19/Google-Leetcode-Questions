@@ -1,6 +1,8 @@
 import java.util.Arrays;
 
 
+
+//Check if both the strings are anagrams
 public class Anagram {
 
     public boolean getAnagram(String str,String s){
