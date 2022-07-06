@@ -21,11 +21,11 @@ return ans;
     public static void main(String[] args) {
 
            MaximumProduct ms = new MaximumProduct();
-           int[]arr = new int[]{2,-3,-2,4};
-           int[]nums = new int []{4,4,-2,-4};
+           int[]arr = new int[]{2,3,-2,4};
+           int[]nums = new int []{-2,0,-1};
 
            System.out.println(ms.getMax_product(arr));
-           System.out.println(ms.getMax_product(nums));
+          System.out.println(ms.getMax_product(nums));
 
     }
 }
