@@ -1,6 +1,7 @@
 package normal
 
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class RemovingDuplicates3 {
@@ -25,13 +26,30 @@ class RemovingDuplicates3 {
         return newList
     }
 
+    // Using LinkedHashSet
+    fun<T>remove1(list:ArrayList<T>):ArrayList<T>{
+
+        //Create a new LinkedHashset
+        val set = LinkedHashSet<T>()
+
+        //add list in it
+        set.addAll(set)
+
+        //clear the list
+        list.clear()
+
+        //add non-duplicates
+        list.addAll(set)
+
+        return list
+    }
+
 
     fun main(args: Array<String>) {
 
         // Get the ArrayList with duplicate values
         val list = ArrayList(
-            Arrays
-                .asList(1, 10, 1, 2, 2, 3, 3, 10, 3, 4, 5, 5)
+            listOf(1, 10, 1, 2, 2, 3, 3, 10, 3, 4, 5, 5)
         )
 
         // Print the Arraylist
