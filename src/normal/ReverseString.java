@@ -11,4 +11,11 @@ public class ReverseString {
        }
        return rev;
     }
+
+    public static void main(String[] args) {
+        String s = "Tejas";
+
+        ReverseString rs = new ReverseString();
+        System.out.println(rs.strReverse(s));
+    }
 }
