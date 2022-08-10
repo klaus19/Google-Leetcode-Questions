@@ -1,9 +1,11 @@
+package GraphQuestions;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 
-// Definition for a Node.
+// Definition for a GraphQuestions.Node.
 class Node {
     public int val;
     public List<Node> neighbors;

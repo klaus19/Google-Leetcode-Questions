@@ -1,3 +1,5 @@
+package slidingwindow;
+
 public class ProductofArray {
 
     public int[]productArray(int nums[]){

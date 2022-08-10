@@ -1,3 +1,5 @@
+package slidingwindow;
+
 public class MaxSumSubArray {
 
     public static int findSumMax(int []nums,int k){

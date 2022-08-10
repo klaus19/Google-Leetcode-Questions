@@ -1,3 +1,5 @@
+package slidingwindow;
+
 public class MaximumSubArray {
 
     public int maxSubArray(int[]nums){

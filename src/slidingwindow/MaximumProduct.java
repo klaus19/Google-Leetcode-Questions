@@ -1,3 +1,5 @@
+package slidingwindow;
+
 import org.jetbrains.annotations.NotNull;
 
 public class MaximumProduct{

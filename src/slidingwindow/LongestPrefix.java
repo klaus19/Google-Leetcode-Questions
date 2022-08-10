@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package slidingwindow;
 
 public class LongestPrefix {
 
@@ -9,7 +9,7 @@ public class LongestPrefix {
 //    }
 //
 //    public static void main(String[] args) {
-//        LongestPrefix lt = new LongestPrefix();
+//        slidingwindow.LongestPrefix lt = new slidingwindow.LongestPrefix();
 //        String []st = new String[]{"flip","flow","flam"};
 //        System.out.println(Arrays.toString(lt.longestprefix(st)));
 //    }
