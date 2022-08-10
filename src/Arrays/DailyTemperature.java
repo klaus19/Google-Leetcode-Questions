@@ -6,26 +6,20 @@ package Arrays;
 
 public class DailyTemperature {
 
-    public int[] dailyTemperatures(int[] temperatures) {
-        int n = temperatures.length;
-        int hottest = 0;
-        int answer[] = new int[n];
 
-        for (int currDay = n - 1; currDay >= 0; currDay--) {
-            int currentTemp = temperatures[currDay];
-            if (currentTemp >= hottest) {
-                hottest = currentTemp;
-                continue;
+        public int[] dailyTemperatures(int[] temperatures) {
+            int n = temperatures.length;
+            int[] answer = new int[n];
+            for (int day = 0; day < n; day++) {
+                for (int futureDay = day + 1; futureDay < n; futureDay++) {
+                    if (temperatures[futureDay] > temperatures[day]) {
+                        answer[day] = futureDay - day;
+                        break;
+                    }
+                }
             }
 
-            int days = 1;
-            while (temperatures[currDay + days] <= currentTemp) {
-                // Use information from answer to search for the next warmer day
-                days += answer[currDay + days];
-            }
-            answer[currDay] = days;
+            return answer;
         }
-
-        return answer;
     }
-}
+
