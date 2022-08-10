@@ -1,20 +1,25 @@
 package DP;
 
+//House of Robber
+//Given an integer array nums representing the amount of money of each house,
+// return the maximum amount of money you can rob tonight without alerting the police.
+
+//Time complexity
 public class HouseRobber {
 
     public int rob(int[]nums){
-        int money = nums[0];
+       if (nums.length==1){
+           return nums[0];
+       }
+       int money = nums[0];
+       int curr_money = Math.max(nums[0],nums[1]);
+       for (int i=2;i<nums.length;i++){
+           int new_money = Math.max(nums[i]+money,curr_money);
 
-        for (int i=1;i<nums.length;i++){
-            if (i%2!=0){
-                money +=nums[i];
-            }
-
-            if (nums.length<=2){
-                return nums[i-1];
-            }
-        }
-        return money;
+           money=curr_money;
+           curr_money=new_money;
+       }
+        return curr_money;
     }
 
     public static void main(String[] args) {
