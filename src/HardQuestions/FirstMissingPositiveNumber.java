@@ -18,6 +18,8 @@ public class FirstMissingPositiveNumber {
 
         int result=1;
 
+        return result;
+
     }
 
 }
