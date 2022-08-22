@@ -3,6 +3,9 @@ package HotGoogleQuestions;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+//Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
+//The functions get and put must each run in O(1) average time complexity.
+
 public class LRUCache extends LinkedHashMap<Integer,Integer> {
 
     private int capacity;
