@@ -5,18 +5,20 @@ import java.util.Stack;
 
 public class SumofUnique {
 
-    Stack<Integer>st = new Stack<>();
+
     public int uniqueElements(int[]nums){
-        int first = nums[0];
+       HashMap<Integer,Integer>map = new HashMap<>();
+
        for (int i=0;i<nums.length;i++){
-           if (nums[i]!=first){
-               first+=nums[i];
-               st.push(first);
-           }else{
-              st.pop();
-           }
+           int s = nums[i];
+           map.put(s,map.getOrDefault(s,0)+1);
        }
-       return first;
+       int count=0;
+       for (int i=0;i<nums.length;i++){
+           if(map.get(nums[i])==1)
+               count+=nums[i];
+       }
+       return count;
     }
 
     public static void main(String[] args) {
